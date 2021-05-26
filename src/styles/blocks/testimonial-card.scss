@@ -7,7 +7,15 @@
     @include square(153px);
     margin-bottom: 28px;
 
+    border: 2px solid transparent;
     border-radius: 50%;
+    transition-property: border, border-radius;
+    @include transition-linear(0.3s);
+  }
+
+  &:hover &__picture {
+    border-radius: 30%;
+    border: 2px solid $blue-color;
   }
 
   &__title {
